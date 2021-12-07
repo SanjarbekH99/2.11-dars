@@ -27,6 +27,7 @@
         margin-top: 50px;
         @include displayFlexSetter(space-between, center);
         &__item{
+            padding: 10px;
             display: flex;
             flex-direction: column;
             &::before{
@@ -58,6 +59,36 @@
             }
         }
         
+    }
+}
+
+@media screen and (max-width: 995px){
+    .feedback{
+        &__title, &__desc{
+            text-align: center;
+            width: 100%;
+        }
+        .cards{
+            flex-wrap: wrap;
+            &__item{
+                width: 50%;
+                align-items: center;
+                &__desc{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 625px){
+    .feedback{
+        .cards{
+            &__item{
+                width: 100%;
+                
+            }
+        }
     }
 }
 
